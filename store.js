@@ -1,0 +1,1 @@
+store = {artists: [], albums: [], articles: []}
