@@ -1,5 +1,14 @@
 function artistsController(data){
-  for (var i = 0; i<data.artists.items.length; i++){
-    $('#artist_name').append(data.artists.items[i].name)
-  }
+  var src = $("#artist-template")[0].innerHTML
+  var template = Handlebars.compile(src)
+  var artistList = template(data.artists.items)
+  $("#artist_name").append(artistList)
+}
+
+function chooseArtist(artist_obj){
+  const name = artist_obj.dataset.artist_name;
+  const spotify_id = artist_obj.dataset.artist_id;
+  const chosen_artist = new Artist(name, spotify_id);
+  $('#artist_name').empty()
+  getAlbumsAdapter(chosen_artist);
 }

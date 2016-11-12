@@ -22,12 +22,20 @@
 
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="handlebars.js"></script>
+  <script src="./handlebars.js"></script>
   <script src="./store.js"></script>
   <script src="./models/artist.js"></script>
   <script src="./models/album.js"></script>
   <script src="./models/article.js"></script>
-  <script src="./adapters/getArtistAdapter.js"></script>
+  <script src="./adapters/getArtistsAdapter.js"></script>
   <script src="./controllers/artistsController.js"></script>
+  <script id="artist-template" type="text/x-handlebars-template">
+      <ul>
+        {{#each this}}
+          <li><a href="#" data-artist_id="{{id}}" data-artist_name="{{name}}" onclick='chooseArtist(this)'>{{name}}</a></li>
+          <li><img src="{{images.2.url}}"></li>
+        {{/each}}
+      </ul>
+  </script>
 </body>
 </html>
