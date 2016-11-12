@@ -1,4 +1,4 @@
-function getAlbumAdapter(artist){
+function getAlbumsAdapter(artist){
   event.preventDefault()
   $.ajax({
     method: "GET"
