@@ -32,6 +32,7 @@
   <script src="./adapters/getAlbumsAdapter.js"></script>
   <script src="./adapters/getAlbumArticlesAdapter.js"></script>
   <script src="./controllers/artistsController.js"></script>
+  <script src="./controllers/albumArticlesController.js"></script>
   <script src="./controllers/albumsController.js"></script>
   <script id="artists-template" type="text/x-handlebars-template">
       <ul>
@@ -54,9 +55,9 @@
   <script id="albumArticles-template" type="text/x-handlebars-template">
      <ul>
        {{#each this}}
-         <li><a href="{{url}}">{{name}}</a></li>
-         <li>{{date}}</li>
-         <li>{{description}}</li>
+         <li><a href="{{web_url}}">{{headline.main}}</a></li>
+         <li>{{pub_date}}</li>
+         <li>{{snippet}}</li>
        {{/each}}
      </ul>
  </script>
