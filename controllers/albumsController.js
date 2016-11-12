@@ -6,6 +6,25 @@ function albumsController(data){
   $("#albums").append(albumsList)
 }
 
+function chooseAlbum(album_obj){
+
+  const album_name = album_obj.dataset.album_name
+  const artist_name = album_obj.dataset.artist_name
+  const artist_id = album_obj.dataset.artist_id
+  // const album_img = album_obj.dataset.album_img
+  const chosen_album = new Album(album_name, artist_name, artist_id)
+  $('#albums').empty()
+  $('#albums').append(`<br>${chosen_album.artist_name}</br>`)
+  $('#albums').append(`<br>${chosen_album.name}</br>`)
+  $('#albums').append(`<img src='${album_obj.dataset.album_img}'/>`)
+  debugger
+  getAlbumArticlesAdapter(chosen_album);
+
+}
+
+
+
+
 // function singler(albums){
 //   let album_names = []
 //   let single_albums = []

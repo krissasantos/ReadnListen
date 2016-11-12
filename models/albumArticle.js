@@ -11,5 +11,6 @@ const AlbumArticle = (function(){
       this.id = ++id;
       store.artistArticles.push(this);
     }
+
   }
 }())
