@@ -1,7 +1,7 @@
 const Artist = (function(){
 
   let id = 0;
-  
+
   return class Artist {
 
     constructor(name){

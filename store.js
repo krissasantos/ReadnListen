@@ -1,1 +1,1 @@
-store = {artists: [], albums: [], articles: []}
+store = {artists: [], albums: [], artistArticles: [], albumArticles: []}
