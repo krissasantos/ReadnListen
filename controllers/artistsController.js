@@ -1,5 +1,5 @@
 function artistsController(data){
-  var src = $("#artist-template")[0].innerHTML
+  var src = $("#artists-template")[0].innerHTML
   var template = Handlebars.compile(src)
   var artistList = template(data.artists.items)
   $("#artist_name").append(artistList)
@@ -10,5 +10,8 @@ function chooseArtist(artist_obj){
   const spotify_id = artist_obj.dataset.artist_id;
   const chosen_artist = new Artist(name, spotify_id);
   $('#artist_name').empty()
+  $('#artist_name').append(`<br>${chosen_artist.name}</br>`)
+  $('#artist_name').append(`<img src='${artist_obj.dataset.artist_pic}'/>`)
+
   getAlbumsAdapter(chosen_artist);
 }

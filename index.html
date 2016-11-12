@@ -11,13 +11,13 @@
     <input type="submit" onclick="getArtistsAdapter()"/>
   </form>
   <div id="artist_name">
-    
+
   </div>
   <div id="albums">
-    
+
   </div>
   <div id="articles">
-    
+
   </div>
 
   </div>
@@ -26,17 +26,29 @@
   <script src="./store.js"></script>
   <script src="./models/artist.js"></script>
   <script src="./models/album.js"></script>
-  <script src="./models/article.js"></script>
+  <script src="./models/artistArticle.js"></script>
+  <script src="./models/albumArticle.js"></script>
   <script src="./adapters/getArtistsAdapter.js"></script>
   <script src="./adapters/getAlbumsAdapter.js"></script>
   <script src="./controllers/artistsController.js"></script>
-  <script id="artist-template" type="text/x-handlebars-template">
+  <script src="./controllers/albumsController.js"></script>
+  <script id="artists-template" type="text/x-handlebars-template">
       <ul>
         {{#each this}}
-          <li><a href="#" data-artist_id="{{id}}" data-artist_name="{{name}}" onclick='chooseArtist(this)'>{{name}}</a></li>
+          <li><a href="#" data-artist_pic="{{images.2.url}}" data-artist_id="{{id}}" data-artist_name="{{name}}" onclick='chooseArtist(this)'>{{name}}</a></li>
           <li><img src="{{images.2.url}}"></li>
         {{/each}}
       </ul>
   </script>
+
+  <script id="albums-template" type="text/x-handlebars-template">
+     <ul>
+       {{#each this}}
+         <li><a href="#" data-album_name="{{name}}" data-artist_name="{{artists.0.name}}"onclick='albumArticle(this)'>{{name}}</a></li>
+         <li><img src="{{images.2.url}}"></li>
+       {{/each}}
+     </ul>
+ </script>
+
 </body>
 </html>
