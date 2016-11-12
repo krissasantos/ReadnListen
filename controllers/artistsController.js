@@ -12,6 +12,5 @@ function chooseArtist(artist_obj){
   $('#artist_name').empty()
   $('#artist_name').append(`<br>${chosen_artist.name}</br>`)
   $('#artist_name').append(`<img src='${artist_obj.dataset.artist_pic}'/>`)
-
   getAlbumsAdapter(chosen_artist);
 }
