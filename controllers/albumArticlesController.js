@@ -5,5 +5,3 @@ function albumArticlesController(data){
   var albumsList = template(data.response.docs)
   $("#albums").append(albumsList)
 }
-
-

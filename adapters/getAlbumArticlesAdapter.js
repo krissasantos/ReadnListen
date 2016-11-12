@@ -7,7 +7,6 @@ function getAlbumArticlesAdapter(albumData){
     url: url,
     method: 'GET'
   }).done(function(data) {
-    console.log(data);
     albumArticlesController(data)
   }).fail(function(err) {
     throw err;

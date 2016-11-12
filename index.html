@@ -29,11 +29,14 @@
   <script src="./models/artistArticle.js"></script>
   <script src="./models/albumArticle.js"></script>
   <script src="./adapters/getArtistsAdapter.js"></script>
+  <script src="./adapters/getArtistArticlesAdapter.js"></script>
   <script src="./adapters/getAlbumsAdapter.js"></script>
   <script src="./adapters/getAlbumArticlesAdapter.js"></script>
   <script src="./controllers/artistsController.js"></script>
+  <script src="./controllers/artistArticlesController.js"></script>
   <script src="./controllers/albumArticlesController.js"></script>
   <script src="./controllers/albumsController.js"></script>
+
   <script id="artists-template" type="text/x-handlebars-template">
       <ul>
         {{#each this}}
@@ -48,6 +51,16 @@
        {{#each this}}
          <li><a href="#" data-album_name="{{name}}" data-artist_id="{{artists.0.id}}" data-artist_name="{{artists.0.name}}" data-album_img="{{images.2.url}}" onclick='chooseAlbum(this)'>{{name}}</a></li>
          <li><img src="{{images.2.url}}"></li>
+       {{/each}}
+     </ul>
+ </script>
+
+<script id="artistArticles-template" type="text/x-handlebars-template">
+     <ul>
+       {{#each this}}
+         <li><a href="{{web_url}}">{{headline.main}}</a></li>
+         <li>{{pub_date}}</li>
+         <li>{{snippet}}</li>
        {{/each}}
      </ul>
  </script>

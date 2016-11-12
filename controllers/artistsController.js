@@ -10,7 +10,7 @@ function chooseArtist(artist_obj){
   const spotify_id = artist_obj.dataset.artist_id;
   const chosen_artist = new Artist(name, spotify_id);
   $('#artist_name').empty()
-  $('#artist_name').append(`<br>${chosen_artist.name}</br>`)
+  $('#artist_name').append(`<br /><a href="#" data-name="${chosen_artist.name}" onclick="getArtistArticlesAdapter(this)">${chosen_artist.name}</a>`)
   $('#artist_name').append(`<img src='${artist_obj.dataset.artist_pic}'/>`)
   getAlbumsAdapter(chosen_artist);
 }
