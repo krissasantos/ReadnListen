@@ -6,7 +6,7 @@ body {
   color: white;
 }
 
-h1 {
+#logo h1 {
   font-family: Jaapokki;
   font-size: 1.4em;
 }
@@ -19,10 +19,24 @@ a {
   color: tomato;
 }
 
+.artist-pic {
+  text-align: center;
+}
+
+#albums img {
+  height: 75%;
+  width: 75%;
+}
+
 #artist_query {
   border: none;
   border-bottom: 1px solid black;
   color: black;
+}
+
+#view-2-header h1 {
+  text-align: center;
+  padding-bottom: 1em;
 }
 
 .container-fluid {
@@ -41,4 +55,9 @@ a {
 .main-artist,
 .other-artists {
   text-align: center;
+}
+
+.album{
+  text-align: center;
+  padding-bottom: 0.5em;
 }

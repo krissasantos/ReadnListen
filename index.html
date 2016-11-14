@@ -11,7 +11,7 @@
 </style>
 <body>
   <div class="container-fluid">
-    <div class="row">
+    <div class="row" id="logo">
       <h1>Read N Listen</h1>
     </div><!--.row-->
     <div class="row">
@@ -28,11 +28,12 @@
   <div id="errors">
     
   </div>
-  <div id="artist">
-    
-  </div>
   <div id="albums">
 
+  </div>
+  <div id="artist">
+
+    
   </div>
   <div id="articles">
 
@@ -76,12 +77,25 @@
   </script>
 
   <script id="albums-template" type="text/x-handlebars-template">
-     <ul>
+  <div class="row" id="view-2-header">
+    <div class="col-md-6">
+      <h1>Articles on Album</h1>
+    </div>
+    <div class="col-md-6">
+      <h1>Articles on Artists</h1>
+    </div>
+  </div>
+  <div class="col-md-6">
        {{#each this}}
-         <li><a href="#" data-album_name="{{name}}" data-artist_id="{{artists.0.id}}" data-artist_name="{{artists.0.name}}" data-album_img="{{images.2.url}}" onclick='chooseAlbum(this)'>{{name}}</a></li>
-         <li><img src="{{images.2.url}}"></li>
+        <div class="col-md-4 album">
+         <img src="{{images.1.url}}">
+         <a href="#" data-album_name="{{name}}" data-artist_id="{{artists.0.id}}" data-artist_name="{{artists.0.name}}" data-album_img="{{images.1.url}}" onclick='chooseAlbum(this)'><h4>{{name}}</h4></a>
+         </div>
+
        {{/each}}
-     </ul>
+        </div>
+        </div>
+    
  </script>
 
 <script id="artistArticles-template" type="text/x-handlebars-template">
