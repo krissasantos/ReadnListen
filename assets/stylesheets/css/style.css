@@ -16,6 +16,7 @@ form {
 
 img {
   border-radius: 30px;
+  max-width: 100%;
 }
 
 .black-border-right{
@@ -33,6 +34,11 @@ img {
 #logo h1 {
   font-family: Jaapokki;
   font-size: 8em;
+}
+
+.main-headline a {
+  font-family: Jaapokki;
+  font-size: 2.5em;
 }
 
 #search {
@@ -79,6 +85,83 @@ img {
   text-align: left;
   padding-bottom: 2em;
   border: none;
-  border-bottom: 1px solid black;
-
+  /*border-bottom: solid 1px rgba(127,127,127,0.5);*/
+  border-top: 3px double #8c8b8b;
 }
+
+.artistArticles img, .albumArticles img{
+    display: block;
+    margin: 0 auto;
+}
+
+/*nav a {
+  position: relative;
+  display: inline-block;
+  margin: 45px 25px;
+  outline: none;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  font-size: 1.35em;
+}
+
+nav a:hover,
+nav a:focus {
+  outline: none;
+}
+
+.ij-effect-17 a {
+  color: #10649b;
+  text-shadow: none;
+  padding: 10px 0;
+}
+
+.ij-effect-17 a::before {
+  color: #fff;
+  text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  content: attr(data-hover);
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  pointer-events: none;
+}
+
+.ij-effect-17 a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  opacity: 0;
+  -webkit-transform: translateY(5px);
+  -moz-transform: translateY(5px);
+  transform: translateY(5px);
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  pointer-events: none;
+}
+
+.ij-effect-17 a:hover::before,
+.ij-effect-17 a:focus::before {
+  opacity: 0;
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+
+.ij-effect-17 a:hover::after,
+.ij-effect-17 a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+*/

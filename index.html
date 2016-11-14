@@ -115,15 +115,17 @@
 
        {{#each this}}
         <div class="row artistArticles">
-        <div class="col-md-2">
+        <div class="col-md-4">
          <p>{{pub_date}}</p>
         </div>
-       <div class="col-md-4">
-       <p> <bold> <a href="{{web_url}}">{{headline.main}}</a></bold></p>
+       <div class="col-md-4 main-headline">
+        <p> <bold> <a href="{{web_url}}">{{headline.main}}</a></bold></p>
+
+
          <p>{{snippet}}</p>
        </div>
 
-       <div class="col-md-6">
+       <div class="col-md-4">
         <img src="{{multimedia.0.url}}" />
        </div>
         </div>
@@ -136,15 +138,15 @@
 
        {{#each this}}
         <div class="row albumArticles">
-        <div class="col-md-2">
+        <div class="col-md-4">
          <p>{{pub_date}}</p>
         </div>
-       <div class="col-md-4">
+       <div class="col-md-4 main-headline">
        <p> <bold> <a href="{{web_url}}">{{headline.main}}</a></bold></p>
          <p>{{snippet}}</p>
        </div>
 
-       <div class="col-md-6">
+       <div class="col-md-4">
         <img src="{{multimedia.0.url}}" />
        </div>
         </div>
