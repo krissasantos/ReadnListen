@@ -9,6 +9,6 @@ function getAlbumArticlesAdapter(albumData){
   }).done(function(data) {
     albumArticlesController(data)
   }).fail(function(err) {
-    throw err;
+    showError()
   });
 }

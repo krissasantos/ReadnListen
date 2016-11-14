@@ -8,6 +8,6 @@ function getArtistArticlesAdapter(artistData){
   }).done(function(data) {
     artistArticlesController(data)
   }).fail(function(err) {
-    throw err;
+    showError();
   });
 }

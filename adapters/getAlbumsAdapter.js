@@ -7,6 +7,7 @@ function getAlbumsAdapter(artist){
   }).done(function(data){
       //proceed to Album controller
       albumsController(data)
+  }).fail(function(err) {
+    showError();
   })
 }
-
