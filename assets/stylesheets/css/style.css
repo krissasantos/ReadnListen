@@ -75,7 +75,7 @@ img {
   padding-bottom: 0.5em;
 }
 
-.artistArticles {
+.artistArticles, .albumArticles {
   text-align: left;
   padding-bottom: 2em;
   border: none;

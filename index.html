@@ -21,18 +21,18 @@
           <input type="submit" class="btn btn-default" onclick="getArtistsAdapter()"/>
         </form>
       </div><!--.col-md-12-->
-      
+
     </div><!--.row-->
-  
+
     <div id="errors">
-      
+
     </div>
     <div id="albums">
 
     </div>
     <div id="artist">
 
-      
+
     </div>
     <div id="articles">
 
@@ -89,7 +89,7 @@
         </div>
     </div>
   </script>
-  
+
   <script id="albums-template" type="text/x-handlebars-template">
   <div class="row" id="view-2-header">
     <div class="col-md-6 black-border-right">
@@ -108,11 +108,11 @@
        {{/each}}
         </div>
         </div>
-    
+
  </script>
 
 <script id="artistArticles-template" type="text/x-handlebars-template">
-   
+
        {{#each this}}
         <div class="row artistArticles">
         <div class="col-md-2">
@@ -124,22 +124,31 @@
        </div>
 
        <div class="col-md-6">
-        <img src="https://static01.nyt.com/{{multimedia.0.url}}" />
+        <img src="{{multimedia.0.url}}" />
        </div>
         </div>
        {{/each}}
-  
+
 
  </script>
 
   <script id="albumArticles-template" type="text/x-handlebars-template">
-     <ul>
+
        {{#each this}}
-         <li><a href="{{web_url}}">{{headline.main}}</a></li>
-         <li>{{pub_date}}</li>
-         <li>{{snippet}}</li>
+        <div class="row albumArticles">
+        <div class="col-md-2">
+         <p>{{pub_date}}</p>
+        </div>
+       <div class="col-md-4">
+       <p> <bold> <a href="{{web_url}}">{{headline.main}}</a></bold></p>
+         <p>{{snippet}}</p>
+       </div>
+
+       <div class="col-md-6">
+        <img src="{{multimedia.0.url}}" />
+       </div>
+        </div>
        {{/each}}
-     </ul>
  </script>
 
 </body>

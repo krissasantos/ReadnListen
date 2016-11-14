@@ -7,7 +7,6 @@ function getArtistArticlesAdapter(artistData){
     url: url,
     method: 'GET'
   }).done(function(data) {
-    debugger;
     artistArticlesController(data)
   }).fail(function(err) {
     showError();
