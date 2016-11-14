@@ -1,5 +1,10 @@
+h1 {
+  font-family: Jaapokki;
+  font-size: 1.4em;
+}
+
 form {
-  padding-top: 5em;
+  padding-top: 4em;
 }
 
 #artist_query {
