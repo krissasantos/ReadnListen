@@ -3,5 +3,5 @@ function albumArticlesController(data){
   var src = $("#albumArticles-template")[0].innerHTML
   var template = Handlebars.compile(src)
   var albumsList = template(data.response.docs)
-  $("#albums").append(albumsList)
+  $("#articles").append(albumsList)
 }
