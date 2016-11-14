@@ -1,3 +1,16 @@
+
+function validateForm() {
+  event.preventDefault()
+// debugger
+    var x = $("input#artist_query").val();
+    if (x == null || x == "") {
+        alert("Name must be filled out");
+        return false;
+    }else{
+      getArtistsAdapter()
+    }
+}
+
 function artistsController(data){
   var src = $("#artists-template")[0].innerHTML;
   var template = Handlebars.compile(src);
