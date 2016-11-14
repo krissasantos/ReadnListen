@@ -99,13 +99,24 @@
  </script>
 
 <script id="artistArticles-template" type="text/x-handlebars-template">
-     <ul>
+   
        {{#each this}}
-         <li><a href="{{web_url}}">{{headline.main}}</a></li>
-         <li>{{pub_date}}</li>
-         <li>{{snippet}}</li>
+        <div class="row artistArticles">
+        <div class="col-md-2">
+         <p>{{pub_date}}</p>
+        </div>
+       <div class="col-md-4">
+       <p> <bold> <a href="{{web_url}}">{{headline.main}}</a></bold></p>
+         <p>{{snippet}}</p>
+       </div>
+
+       <div class="col-md-6">
+      <!--   <li>{{multimedia.0.url}}</li> -->
+       </div>
+        </div>
        {{/each}}
-     </ul>
+  
+
  </script>
 
   <script id="albumArticles-template" type="text/x-handlebars-template">

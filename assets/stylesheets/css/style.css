@@ -73,3 +73,11 @@ img {
   text-align: center;
   padding-bottom: 0.5em;
 }
+
+.artistArticles {
+  text-align: left;
+  padding-bottom: 2em;
+  border: none;
+  border-bottom: 1px solid black;
+
+}
