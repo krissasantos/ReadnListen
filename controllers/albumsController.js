@@ -19,9 +19,6 @@ function chooseAlbum(album_obj){
   getAlbumArticlesAdapter(chosen_album);
 }
 
-
-
-
 // function singler(albums){
 //   let album_names = []
 //   let single_albums = []

@@ -3,13 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <title>ReadNListen</title>
+  <link rel="stylesheet" href="assets/stylesheets/css/bootstrap.css" />
+  <link rel="stylesheet" href="assets/stylesheets/css/style.css" />
 </head>
 <body>
-  <form>
-    <label for="artist_query">Artist Name:</label>
-    <input type="text" name="artist_query" id="artist_query"/>
-    <input type="submit" onclick="getArtistsAdapter()"/>
-  </form>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <form>
+          <input type="text" name="artist_query" placeholder="Artist Name" id="artist_query"/>
+          <input type="submit" class="btn btn-default" onclick="getArtistsAdapter()"/>
+        </form>
+      </div><!--.col-md-12-->
+      
+    </div><!--.row-->
+  </div><!--.container-fluid-->
+  
   <div id="errors">
     
   </div>
@@ -25,6 +34,7 @@
 
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.js"></script>
   <script src="./handlebars.js"></script>
   <script src="./store.js"></script>
   <script src="./app.js"></script>

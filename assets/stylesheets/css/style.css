@@ -1,0 +1,17 @@
+form {
+  padding-top: 5em;
+}
+
+#artist_query {
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.container-fluid {
+  text-align: center;
+  font-size: 4em;
+}
+
+.btn {
+  font-size: 0.6em;
+}
