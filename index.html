@@ -29,7 +29,7 @@
     
   </div>
   <div id="artist">
-
+    
   </div>
   <div id="albums">
 
@@ -57,13 +57,22 @@
   <script src="./controllers/albumArticlesController.js"></script>
   <script src="./controllers/albumsController.js"></script>
 
-  <script id="artists-template" type="text/x-handlebars-template">
-      <ul>
+<script id="artists-template" type="text/x-handlebars-template">
+      <div class='row main-artist'>
+          <img src="{{this.0.images.2.url}}" />
+          <a href="#" data-artist_pic="{{this.0.images.2.url}}" data-artist_id="{{this.0.id}}" data-artist_name="{{this.0.name}}" onclick='chooseArtist(this)'><h2>{{this.0.name}}</h2></a>
+      </div>
+      <div class='row other-artists'>
+        <h3>Or did you mean...</h3>
+
         {{#each this}}
-          <li><a href="#" data-artist_pic="{{images.2.url}}" data-artist_id="{{id}}" data-artist_name="{{name}}" onclick='chooseArtist(this)'>{{name}}</a></li>
-          <li><img src="{{images.2.url}}"></li>
+          {{#unless @first}}
+          <div class='col-md-4'>
+            <a href="#" data-artist_pic="{{images.2.url}}" data-artist_id="{{id}}" data-artist_name="{{name}}" onclick='chooseArtist(this)'>{{name}}</a>
+          </div>
+          {{/unless}}
         {{/each}}
-      </ul>
+      </div>
   </script>
 
   <script id="albums-template" type="text/x-handlebars-template">

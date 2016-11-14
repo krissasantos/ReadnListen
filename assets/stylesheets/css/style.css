@@ -7,6 +7,10 @@ form {
   padding-top: 4em;
 }
 
+a {
+  color: tomato;
+}
+
 #artist_query {
   border: none;
   border-bottom: 1px solid black;
@@ -19,4 +23,9 @@ form {
 
 .btn {
   font-size: 0.6em;
+}
+
+.main-artist,
+.other-artists {
+  text-align: center;
 }
