@@ -12,7 +12,7 @@
 <body>
   <div class="container-fluid">
     <div class="row" id="logo">
-      <h1>Read N Listen</h1>
+      <h1>Read <span class='tomato'>N</span> Listen</h1>
     </div><!--.row-->
     <div class="row" id="search">
       <div class="col-md-12">
@@ -61,7 +61,7 @@
 <script id="artists-template" type="text/x-handlebars-template">
       <div class='row main-artist'>
           <img src="{{this.0.images.2.url}}" />
-          <a href="#" data-artist_pic="{{this.0.images.2.url}}" data-artist_id="{{this.0.id}}" data-artist_name="{{this.0.name}}" onclick='chooseArtist(this)'><h2>{{this.0.name}}</h2></a>
+          <a href="#" data-artist_genres="{{this.0.genres}}" data-artist_followers="{{this.0.followers.total}}" data-artist_pic="{{this.0.images.2.url}}" data-artist_id="{{this.0.id}}" data-artist_name="{{this.0.name}}" onclick='chooseArtist(this)'><h2>{{this.0.name}}</h2></a>
       </div>
       <div class='row other-artists'>
         <h3>Or did you mean...</h3>
@@ -78,14 +78,14 @@
 
   <script id="albums-template" type="text/x-handlebars-template">
   <div class="row" id="view-2-header">
-    <div class="col-md-6">
+    <div class="col-md-6 black-border-right">
       <h1>Articles on Album</h1>
     </div>
     <div class="col-md-6">
       <h1>Articles on Artists</h1>
     </div>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-6 black-border-right">
        {{#each this}}
         <div class="col-md-4 album">
          <img src="{{images.1.url}}">

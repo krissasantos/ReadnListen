@@ -1,17 +1,25 @@
 body {
-  background-color: black;
+  background-color: white;
 }
 
 * {
-  color: white;
+  color: black;
+}
+
+a {
+  color: black;
 }
 
 form {
   padding-top: 4em;
 }
 
-a {
-  color: tomato;
+img {
+  border-radius: 30px;
+}
+
+.black-border-right{
+  border-right: 2px solid black;
 }
 
 .container-fluid {
@@ -36,7 +44,6 @@ a {
   border-bottom: 1px solid black;
   color: black;
   padding: 0.2em;
-  border-radius: 30px;
 }
 
 .artist-pic {
