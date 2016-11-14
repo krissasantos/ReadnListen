@@ -76,6 +76,20 @@
       </div>
   </script>
 
+  <script id="artistInfoTemplate" type="text/x-handlebars-template">
+    <div class"row">
+      <div class="col-md-6 artist-pic">
+        <img src="{{dataset.artist_pic}}"><br/>
+        <h4><a href="#" data-name="{{dataset.artist_name}}" onclick="getArtistArticlesAdapter(this)">{{dataset.artist_name}}</a></h4>
+        <div>
+          <p>Followers: {{dataset.artist_followers}}</p>
+        </div>
+        <div>
+          <p>Genres: {{dataset.artist_genres}}</p>
+        </div>
+    </div>
+  </script>
+  
   <script id="albums-template" type="text/x-handlebars-template">
   <div class="row" id="view-2-header">
     <div class="col-md-6 black-border-right">
@@ -91,7 +105,6 @@
          <img src="{{images.1.url}}">
          <a href="#" data-album_name="{{name}}" data-artist_id="{{artists.0.id}}" data-artist_name="{{artists.0.name}}" data-album_img="{{images.1.url}}" onclick='chooseAlbum(this)'><h4>{{name}}</h4></a>
          </div>
-
        {{/each}}
         </div>
         </div>

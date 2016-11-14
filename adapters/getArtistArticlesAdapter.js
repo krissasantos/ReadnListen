@@ -11,5 +11,4 @@ function getArtistArticlesAdapter(artistData){
   }).fail(function(err) {
     showError();
   });
-
 }
