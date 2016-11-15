@@ -1,7 +1,6 @@
 
 function validateForm() {
   event.preventDefault()
-// debugger
     var x = $("input#artist_query").val();
     if (x == null || x == "") {
         alert("Name must be filled out");
