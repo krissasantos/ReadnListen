@@ -19,7 +19,9 @@ function artistsController(data){
 }
 
 function chooseArtist(artist_href){
-  artist_href.dataset.artist_genres = artist_href.dataset.artist_genres.replace("," , " - ")
+  if (artist_href.dataset.artist_genres){
+      artist_href.dataset.artist_genres = artist_href.dataset.artist_genres.replace("," , " - ")
+  }
   var src = $("#artistInfoTemplate")[0].innerHTML;
   var template = Handlebars.compile(src);
   var artist = template(artist_href);

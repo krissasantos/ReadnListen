@@ -1,7 +1,6 @@
 function getArtistsAdapter(){
   event.preventDefault();
   var artist_name = $('#artist_query').val();
-
   $("div").not(".container-fluid").empty()
   $.ajax({
     method: "GET",
