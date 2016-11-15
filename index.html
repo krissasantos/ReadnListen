@@ -23,7 +23,10 @@
       </div><!--.col-md-12-->
 
     </div><!--.row-->
-
+    
+    <div id="nav">
+      
+    </div>
     <div id="errors">
 
     </div>
@@ -62,7 +65,7 @@
       <div class='row main-artist'>
           <h1>Your Artist Is</h1>
           <img src="{{this.0.images.2.url}}" />
-          <a href="#" data-artist_genres="{{this.0.genres}}" data-artist_followers="{{this.0.followers.total}}" data-artist_pic="{{this.0.images.2.url}}" data-artist_id="{{this.0.id}}" data-artist_name="{{this.0.name}}" onclick='chooseArtist(this)'><h2>{{this.0.name}}</h2></a>
+          <a href="#" data-listen_link="{{this.0.external_urls.spotify}}" data-artist_genres="{{this.0.genres}}" data-artist_followers="{{this.0.followers.total}}" data-artist_pic="{{this.0.images.2.url}}" data-artist_id="{{this.0.id}}" data-artist_name="{{this.0.name}}" onclick='chooseArtist(this)'><h2>{{this.0.name}}</h2></a>
       </div>
       <div class='row other-artists'>
         <h3>Or did you mean...</h3>
@@ -82,6 +85,9 @@
       <div class="col-md-6 artist-pic">
         <img src="{{dataset.artist_pic}}"><br/>
         <h4><a href="#" data-name="{{dataset.artist_name}}" onclick="getArtistArticlesAdapter(this)">{{dataset.artist_name}}</a></h4>
+        <div>
+          <a href="{{dataset.listen_link}}">Listen Now</a>
+        </div>
         <div>
           <p>Followers: {{dataset.artist_followers}}</p>
         </div>
