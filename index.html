@@ -60,6 +60,7 @@
 
 <script id="artists-template" type="text/x-handlebars-template">
       <div class='row main-artist'>
+          <h1>Your Artist Is</h1>
           <img src="{{this.0.images.2.url}}" />
           <a href="#" data-artist_genres="{{this.0.genres}}" data-artist_followers="{{this.0.followers.total}}" data-artist_pic="{{this.0.images.2.url}}" data-artist_id="{{this.0.id}}" data-artist_name="{{this.0.name}}" onclick='chooseArtist(this)'><h2>{{this.0.name}}</h2></a>
       </div>
@@ -95,7 +96,7 @@
     <div class="col-md-6 black-border-right">
       <h1>Articles on Album</h1>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 artist-articles">
       <h1>Articles on Artists</h1>
     </div>
   </div>
